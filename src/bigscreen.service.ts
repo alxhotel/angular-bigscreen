@@ -116,7 +116,7 @@ export class BigScreenService {
 		// Coerce to boolean in case of old WebKit
 		return Boolean(document[this.fn.fullscreenEnabled]);
 	}
-	
+
 	public getElement() {
 		return document[this.fn.fullscreenElement];
 	}
