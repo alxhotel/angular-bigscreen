@@ -33,7 +33,7 @@ For example:
 
   ```js
   // Request fullscreen
-  this.bigScreenService.request(this.elementRed.nativeElement);
+  this.bigScreenService.request(this.elementRef.nativeElement);
   ```
 
 ### API
