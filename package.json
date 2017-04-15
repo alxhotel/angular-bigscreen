@@ -1,6 +1,6 @@
 {
   "name": "angular-bigscreen",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An Angular service to quickly use the HTML5 fullscreen API",
   "main": "index.bundle.js",
   "module": "index.js",
@@ -10,7 +10,7 @@
   "scripts": {
 	"clean": "rimraf dist",
 	"lint": "tslint -c tslint.json src/**/*.ts",
-	"build": "npm run clean && tsc -p tsconfig-esm.json && rollup -c rollup.config.js dist/index.js > dist/index.bundle.js && ngc -p tsconfig-esm.json && cp package.json dist && cp README.md dist",
+	"build": "npm run clean && tsc -p tsconfig.json && rollup -c rollup.config.js dist/index.js > dist/index.bundle.js && ngc -p tsconfig.json && cp package.json dist && cp README.md dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

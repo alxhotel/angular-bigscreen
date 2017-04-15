@@ -1,7 +1,7 @@
 # angular-bigscreen
 [![NPM][npm-image]][npm-url]
-[![Travis][travis-image]](travis-url)
-[![Dependency Status][dependency-status-image]](dependency-status-url)
+[![Travis][travis-image]][travis-url]
+[![Dependency Status][dependency-status-image]][dependency-status-url]
 
 **AngularBigScreen** is an Angular service to quickly use the HTML5 fullscreen API.
 
