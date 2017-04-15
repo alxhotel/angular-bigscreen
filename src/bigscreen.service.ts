@@ -93,18 +93,18 @@ export class BigScreenService {
 	}
 
 	public toggle(elem: any) {
-		if (this.isFullscreen) {
+		if (this.isFullscreen()) {
 			this.exit();
 		} else {
 			this.request(elem);
 		}
 	}
 
-	public onchange(callback: any) {
+	public onChange(callback: any) {
 		document.addEventListener(this.fn.fullscreenchange, callback, false);
 	}
 
-	public onerror(callback: any) {
+	public onError(callback: any) {
 		document.addEventListener(this.fn.fullscreenerror, callback, false);
 	}
 
@@ -112,13 +112,13 @@ export class BigScreenService {
 		return Boolean(document[this.fn.fullscreenElement]);
 	}
 
-	public element() {
-		return document[this.fn.fullscreenElement];
-	}
-
-	public enabled() {
+	public isEnabled() {
 		// Coerce to boolean in case of old WebKit
 		return Boolean(document[this.fn.fullscreenEnabled]);
+	}
+	
+	public getElement() {
+		return document[this.fn.fullscreenElement];
 	}
 
 }
