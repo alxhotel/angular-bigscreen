@@ -40,11 +40,15 @@ For example:
 
 #### `this.bigScreenService.isFullscreen()`
 
-Returns a `boolean`. True if fullscreen is been used, else false. 
+Returns a `boolean`. True if fullscreen is being used, else false. 
+
+#### `this.bigScreenService.isEnabled()`
+
+Returns a `boolean`. Checks if fullscreen is enabled.
 
 #### `this.bigScreenService.request(el: ElementRef)`
 
-Requests fullscreen in an `ElementRef`.
+Requests fullscreen on an `ElementRef`.
 
 #### `this.bigScreenService.exit()`
 
@@ -58,13 +62,9 @@ This is a wrapper for `document.fullscreenchange`.
 
 This is a wrapper for `document.fullscreenerror`.
 
-#### `this.bigScreenService.element()`
+#### `this.bigScreenService.getElement()`
 
 Returns an element. This is a wrapper for `document.fullscreenElement`.
-
-#### `this.bigScreenService.enabled()`
-
-Returns a `boolean`. Checks if fullscreen is enabled.
 
 ## License
 
