@@ -15,17 +15,17 @@
 
 2. Import `BigScreenService` to your AppModule
 
-  ```js
-  import { BigScreenService } from 'angular-bigscreen';
-  
-  @NgModule({
-    providers: [ BigScreenService ]
-  })
-  export class AppModule {
-    constructor(private bigScreenService: BigScreenService) {
-    }
-  }
-  ```
+	```js
+	import { BigScreenService } from 'angular-bigscreen';
+	
+	@NgModule({
+	  providers: [ BigScreenService ]
+	})
+	export class AppModule {
+	  constructor(private bigScreenService: BigScreenService) {
+	  }
+	}
+	```
 
 ### Usage
 
