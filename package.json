@@ -14,17 +14,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@angular/core": "^4.0.2",
+    "@angular/core": "^5.2.5",
 	"rxjs": "^5.0.1",
 	"zone.js": "^0.8.4"
   },
   "devDependencies": {
-	"@angular/compiler": "^4.0.2",
-    "@angular/compiler-cli": "^4.0.2",
-	"codelyzer": "~2.0.1",
+	"@angular/compiler": "^5.2.5",
+    "@angular/compiler-cli": "^5.2.5",
+	"codelyzer": "~4.1.0",
 	"rimraf": "^2.6.1",
-	"tslint": "^4.4.2",
-	"typescript": "~2.2.1"
+	"tslint": "^5.9.1",
+	"typescript": "~2.7.2"
   },
   "repository": {
     "type": "git",
@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/alxhotel/angular-bigscreen#readme",
   "dependencies": {
-    "@angular/core": "^4.0.2",
+    "@angular/core": "^5.2.5",
     "rxjs": "^5.3.0",
     "zone.js": "^0.8.5"
   }
