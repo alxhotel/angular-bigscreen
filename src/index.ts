@@ -1,3 +1,3 @@
-export { BigScreenService } from './bigscreen.service';
+export * from './bigscreen.module';
 
-export { BigScreenModule } from './bigscreen.module';
+export * from './bigscreen.service';
