@@ -3,13 +3,8 @@ node_js: stable
 
 sudo: false
 
-install: true
-
-os:
-  - linux
-
 before_script:
   - npm install
 
 script:
-  - npm run lint
+  - npm test
