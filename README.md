@@ -20,12 +20,11 @@
 	import { BigScreenModule } from 'angular-bigscreen';
 	
 	@NgModule({
-		imports: [
-			BigScreenModule.forRoot()
-		]
+	  imports: [
+	    BigScreenModule.forRoot()
+	  ]
 	})
-	export class AppModule {
-		
+	export class AppModule {	
 	}
 	```
 
@@ -35,7 +34,7 @@
 	import { BigScreenService } from 'angular-bigscreen';
 	
 	@Component({
-		selector: 'app-root',
+	  selector: 'app-root',
 	})
 	export class AppComponent {
 	  constructor(private bigScreenService: BigScreenService) {
