@@ -14,15 +14,30 @@
 	$ npm install angular-bigscreen --save
 	```
 
-2. Import `BigScreenService` to your AppModule
+2. Import `BigScreenModule` to your AppModule
+
+	```js
+	import { BigScreenModule } from 'angular-bigscreen';
+	
+	@NgModule({
+		imports: [
+			BigScreenModule.forRoot()
+		]
+	})
+	export class AppModule {
+		
+	}
+	```
+
+3. Import `BigScreenService` and use it in a component
 
 	```js
 	import { BigScreenService } from 'angular-bigscreen';
 	
-	@NgModule({
-	  providers: [ BigScreenService ]
+	@Component({
+		selector: 'app-root',
 	})
-	export class AppModule {
+	export class AppComponent {
 	  constructor(private bigScreenService: BigScreenService) {
 	  }
 	}
