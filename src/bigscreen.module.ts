@@ -1,14 +1,10 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
+import { DocumentRef } from './document-ref';
+
 import { BigScreenService } from './bigscreen.service';
 
 @NgModule({
-	declarations: [
-		BigScreenService
-	],
-	exports: [
-		BigScreenService
-	]
 })
 export class BigScreenModule {
 
@@ -17,6 +13,7 @@ export class BigScreenModule {
 			ngModule: BigScreenModule,
 			providers: [
 				BigScreenService,
+				DocumentRef
 			],
 		};
 	}
