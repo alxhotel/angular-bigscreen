@@ -1,5 +1,7 @@
 # angular-bigscreen
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/alxhotel/angular-bigscreen.svg)](https://greenkeeper.io/)
+
 [![NPM][npm-image]][npm-url]
 [![Travis][travis-image]][travis-url]
 [![Dependency Status][dependency-status-image]][dependency-status-url]
