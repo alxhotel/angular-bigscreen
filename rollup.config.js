@@ -1,6 +1,8 @@
 export default {
-	format: 'umd',
-	moduleName: 'angular-bigscreen',
+	output: {
+		format: 'umd',
+		moduleName: 'angular-bigscreen',
+	},
 	external: [
 		'@angular/core',
 		'@angular/common'
