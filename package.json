@@ -1,6 +1,6 @@
 {
   "name": "angular-bigscreen",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "An Angular service to quickly use the HTML5 fullscreen API",
   "main": "index.bundle.js",
   "module": "index.js",
