@@ -13,10 +13,13 @@
     "build": "npm run clean && tsc -p tsconfig.json && rollup -c rollup.config.js dist/index.js > dist/index.bundle.js && ngc -p tsconfig.json && cp package.json dist && cp README.md dist",
     "test": "npm run lint"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@angular/core": "^7.0.1",
     "rxjs": "^6.3.2",
     "zone.js": "^0.8.5"
+  },
+  "peerDependencies": {
+    "@angular/core": "^7.0.1"
   },
   "devDependencies": {
     "@angular/compiler": "^7.0.1",
