@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { DocumentRef } from './document-ref'
+import { DocumentRef } from './document-ref';
 
 interface FullscreenControls {
 

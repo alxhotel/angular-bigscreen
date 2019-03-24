@@ -10,7 +10,7 @@ describe('BigScreenService', () => {
 	});
 
 	it('should be created', () => {
-		//const service: BigScreenService = TestBed.get(BigScreenService);
-		//expect(service).toBeTruthy();
+		// const service: BigScreenService = TestBed.get(BigScreenService);
+		// expect(service).toBeTruthy();
 	});
 });
