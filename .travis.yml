@@ -6,6 +6,7 @@ sudo: required
 addons:
   chrome: stable
 
+# Use headless Chrome for Travis
 before_install:
 - export CHROME_BIN=chromium-browser
 - export DISPLAY=:99.0
@@ -13,7 +14,7 @@ before_install:
 
 before_script:
   - npm install
+  - npm run build
 
 script:
-  - npm run build
   - npm test
