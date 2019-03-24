@@ -18,7 +18,9 @@ interface FullscreenControls {
 
 }
 
-@Injectable()
+@Injectable({
+	providedIn: 'root'
+})
 export class BigScreenService {
 
 	private fnMap: string[][] = [
@@ -74,14 +76,14 @@ export class BigScreenService {
 	private fn: FullscreenControls;
 	private keyboardAllowed: boolean;
 
-	constructor(private _documentRef: DocumentRef) {
+	constructor(private documentRef: DocumentRef) {
 		this.keyboardAllowed = typeof Element !== 'undefined' && 'ALLOW_KEYBOARD_INPUT' in Element;
-		var ret: any = {};
-		var val;
+		const ret: any = {};
+		let val;
 
-		for (var i = 0; i < this.fnMap.length; i++) {
+		for (let i = 0; i < this.fnMap.length; i++) {
 			val = this.fnMap[i];
-			if (val && val[1] in this._documentRef.nativeDocument) {
+			if (val && val[1] in this.documentRef.nativeDocument) {
 				for (i = 0; i < val.length; i++) {
 					// Map everything to the first list of keys
 					ret[this.fnMap[0][i].toString()] = val[i];
@@ -92,9 +94,9 @@ export class BigScreenService {
 	}
 
 	public request(elem: any) {
-		var request = this.fn.requestFullscreen;
+		const request = this.fn.requestFullscreen;
 
-		elem = elem || this._documentRef.nativeDocument.documentElement;
+		elem = elem || this.documentRef.nativeDocument.documentElement;
 
 		// Work around Safari 5.1 bug: reports support for
 		// keyboard in fullscreen even though it doesn't.
@@ -103,12 +105,12 @@ export class BigScreenService {
 		if (/5\.1[.\d]* Safari/.test(navigator.userAgent)) {
 			elem[request]();
 		} else {
-			elem[request](this.keyboardAllowed && (Element as any).ALLOW_KEYBOARD_INPUT);
+			elem[request](this.keyboardAllowed ? (Element as any).ALLOW_KEYBOARD_INPUT : {});
 		}
 	}
 
 	public exit() {
-		this._documentRef.nativeDocument[this.fn.exitFullscreen]();
+		this.documentRef.nativeDocument[this.fn.exitFullscreen]();
 	}
 
 	public toggle(elem: any) {
@@ -120,24 +122,24 @@ export class BigScreenService {
 	}
 
 	public onChange(callback: any) {
-		this._documentRef.nativeDocument.addEventListener(this.fn.fullscreenchange, callback, false);
+		this.documentRef.nativeDocument.addEventListener(this.fn.fullscreenchange, callback, false);
 	}
 
 	public onError(callback: any) {
-		this._documentRef.nativeDocument.addEventListener(this.fn.fullscreenerror, callback, false);
+		this.documentRef.nativeDocument.addEventListener(this.fn.fullscreenerror, callback, false);
 	}
 
 	public isFullscreen() {
-		return Boolean(this._documentRef.nativeDocument[this.fn.fullscreenElement]);
+		return Boolean(this.documentRef.nativeDocument[this.fn.fullscreenElement]);
 	}
 
 	public isEnabled() {
 		// Coerce to boolean in case of old WebKit
-		return Boolean(this._documentRef.nativeDocument[this.fn.fullscreenEnabled]);
+		return Boolean(this.documentRef.nativeDocument[this.fn.fullscreenEnabled]);
 	}
 
 	public getElement() {
-		return this._documentRef.nativeDocument[this.fn.fullscreenElement];
+		return this.documentRef.nativeDocument[this.fn.fullscreenElement];
 	}
 
 }

@@ -1,29 +1,17 @@
 {
-  "rulesDirectory": ["node_modules/codelyzer"],
+  "extends": "../../tslint.json",
   "rules": {
-    "angular-whitespace": [true, "check-interpolation", "check-semicolon"],
-    "banana-in-box": true,
-    "templates-no-negated-async": true,
-    "directive-selector": [true, "attribute", "sg", "camelCase"],
-    "component-selector": [true, "element", "sg", "kebab-case"],
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
-    "use-view-encapsulation": true,
-    "no-attribute-parameter-decorator": true,
-    "no-output-named-after-standard-event": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
-    "no-output-on-prefix": true,
-    "no-forward-ref": true,
-    "no-unused-css": true,
-    "use-life-cycle-interface": true,
-    "contextual-life-cycle": true,
-    "trackBy-function": true,
-    "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true,
-    "pipe-impure": true,
-    "i18n": [true, "check-id", "check-text"]
+    "directive-selector": [
+      true,
+      "attribute",
+      "lib",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "lib",
+      "kebab-case"
+    ]
   }
 }
