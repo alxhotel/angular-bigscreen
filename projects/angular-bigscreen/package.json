@@ -1,0 +1,24 @@
+{
+  "name": "angular-bigscreen",
+  "version": "3.1.0",
+  "description": "An Angular service to quickly use the HTML5 fullscreen API",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxhotel/angular-bigscreen.git"
+  },
+  "keywords": [
+    "fullscreen",
+    "angular",
+    "api"
+  ],
+  "author": "Alex <alxmorais8@msn.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alxhotel/angular-bigscreen/issues"
+  },
+  "homepage": "https://github.com/alxhotel/angular-bigscreen#readme"
+}
