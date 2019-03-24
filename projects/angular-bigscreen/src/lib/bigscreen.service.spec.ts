@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BigscreenService } from './bigscreen.service';
+import { BigScreenService } from './bigscreen.service';
 
-describe('BigscreenService', () => {
+describe('BigScreenService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-	const service: BigscreenService = TestBed.get(BigscreenService);
-	expect(service).toBeTruthy();
+    const service: BigScreenService = TestBed.get(BigScreenService);
+    expect(service).toBeTruthy();
   });
 });

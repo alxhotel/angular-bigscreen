@@ -3,6 +3,9 @@ node_js: stable
 
 sudo: false
 
+addons:
+  chrome: stable
+
 before_script:
   - npm install
 
