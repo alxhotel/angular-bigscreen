@@ -21,7 +21,7 @@
 	
 	@NgModule({
 	  imports: [
-	    BigScreenModule.forRoot()
+	    BigScreenModule
 	  ]
 	})
 	export class AppModule {	
