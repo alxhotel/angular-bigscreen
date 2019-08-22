@@ -6,6 +6,9 @@ sudo: required
 addons:
   chrome: stable
 
+env:
+  - NG_CLI_ANALYTICS=ci
+
 # 1. Use headless Chrome for Travis
 # 2. Install greenkeep-lockfile
 before_install:
