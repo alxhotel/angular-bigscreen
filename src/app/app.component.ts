@@ -10,7 +10,7 @@ import { BigScreenService } from 'angular-bigscreen';
 export class AppComponent {
 	title = 'angular-bigscreen-app';
 
-	@ViewChild('logo') logoElement: ElementRef;
+	@ViewChild('logo', {static: false}) logoElement: ElementRef;
 
 	constructor(private bigScreenService: BigScreenService) {
 	}
