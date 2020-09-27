@@ -90,7 +90,7 @@ MIT. Copyright (c) [Alex](https://github.com/alxhotel).
 [npm-url]: https://npmjs.org/package/angular-bigscreen
 [travis-image]: https://img.shields.io/travis/com/alxhotel/angular-bigscreen/master.svg
 [travis-url]: https://travis-ci.com/alxhotel/angular-bigscreen
-[dependency-status-image]: https://david-dm.org/alxhotel/angular-bigscreen/peer-status.svg
-[dependency-status-url]: https://david-dm.org/alxhotel/angular-bigscreen?type=peer
+[dependency-status-image]: https://david-dm.org/alxhotel/angular-bigscreen/status.svg
+[dependency-status-url]: https://david-dm.org/alxhotel/angular-bigscreen
 [codestyle-image]: https://img.shields.io/badge/code_style-codelyzer-brightgreen.svg
 [codestyle-url]: https://github.com/mgechev/codelyzer
