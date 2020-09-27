@@ -4,7 +4,7 @@
   "description": "An Angular service to quickly use the HTML5 fullscreen API",
   "peerDependencies": {
     "@angular/common": "^10.1.3",
-    "@angular/core": "^10.1.3",
+    "@angular/core": "^10.1.3"
   },
   "repository": {
     "type": "git",
