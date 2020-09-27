@@ -3,21 +3,20 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { BigScreenService } from 'angular-bigscreen';
 
 @Component({
-	selector: 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.less']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	title = 'angular-bigscreen-app';
+  title = 'Angular Bigscreen Demo';
 
-	@ViewChild('logo') logoElement: ElementRef;
+  @ViewChild('logo') logoElement: ElementRef;
 
-	constructor(private bigScreenService: BigScreenService) {
-	}
+  constructor(private bigScreenService: BigScreenService) {
+  }
 
-	onClickButton() {
-		// Request fullscreen
-		this.bigScreenService.request(this.logoElement.nativeElement);
-	}
-
+  onClickButton(): void {
+    // Request fullscreen
+    this.bigScreenService.request(this.logoElement.nativeElement);
+  }
 }

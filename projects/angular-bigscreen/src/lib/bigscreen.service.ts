@@ -3,19 +3,12 @@ import { Injectable } from '@angular/core';
 import { DocumentRef } from './document-ref';
 
 interface FullscreenControls {
-
 	requestFullscreen: any;
-
 	exitFullscreen: any;
-
 	fullscreenElement: any;
-
 	fullscreenEnabled: string;
-
 	fullscreenchange: string;
-
 	fullscreenerror: string;
-
 }
 
 @Injectable({
@@ -93,7 +86,7 @@ export class BigScreenService {
 		}
 	}
 
-	public request(elem: any) {
+	public request(elem: any): void {
 		const request = this.fn.requestFullscreen;
 
 		elem = elem || this.documentRef.nativeDocument.documentElement;
@@ -109,11 +102,11 @@ export class BigScreenService {
 		}
 	}
 
-	public exit() {
+	public exit(): void {
 		this.documentRef.nativeDocument[this.fn.exitFullscreen]();
 	}
 
-	public toggle(elem: any) {
+	public toggle(elem: any): void {
 		if (this.isFullscreen()) {
 			this.exit();
 		} else {
@@ -121,24 +114,24 @@ export class BigScreenService {
 		}
 	}
 
-	public onChange(callback: any) {
+	public onChange(callback: any): void {
 		this.documentRef.nativeDocument.addEventListener(this.fn.fullscreenchange, callback, false);
 	}
 
-	public onError(callback: any) {
+	public onError(callback: any): void {
 		this.documentRef.nativeDocument.addEventListener(this.fn.fullscreenerror, callback, false);
 	}
 
-	public isFullscreen() {
+	public isFullscreen(): boolean {
 		return Boolean(this.documentRef.nativeDocument[this.fn.fullscreenElement]);
 	}
 
-	public isEnabled() {
+	public isEnabled(): boolean {
 		// Coerce to boolean in case of old WebKit
 		return Boolean(this.documentRef.nativeDocument[this.fn.fullscreenEnabled]);
 	}
 
-	public getElement() {
+	public getElement(): any {
 		return this.documentRef.nativeDocument[this.fn.fullscreenElement];
 	}
 

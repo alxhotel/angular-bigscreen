@@ -7,11 +7,11 @@ import { BigScreenModule } from 'angular-bigscreen';
 
 @NgModule({
   declarations: [
-	AppComponent
+    AppComponent
   ],
   imports: [
-	BrowserModule,
-	BigScreenModule
+    BrowserModule,
+    BigScreenModule
   ],
   providers: [],
   bootstrap: [AppComponent]
