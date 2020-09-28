@@ -11,8 +11,8 @@
 
 1. Install `angular-bigscreen` node module through npm:
 
-	```bash
-	$ npm install angular-bigscreen --save
+	```sh
+	npm install angular-bigscreen
 	```
 
 2. Import `BigScreenModule` to your AppModule
