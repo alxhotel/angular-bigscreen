@@ -16,14 +16,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
-      - uses: nanasess/setup-chromedriver@v1
-      - run: |
-          export CHROME_BIN=chromium-browser
-          export DISPLAY=:99
-          sh -e /etc/init.d/xvfb start
-          sleep 3 # give xvfb some time to start
-      - run: npm install
-      - run: npm run build
-      - run: npm run lint
-      - run: npm run test
+      - uses: GabrielBB/xvfb-action@v1
+         with:
+            run: |
+              export CHROME_BIN=chromium-browser
+              export DISPLAY=:99
+              npm install
+              npm run build
+              npm run lint
+              npm run test
   
