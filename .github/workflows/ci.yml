@@ -16,13 +16,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run build
+      - run: npm run lint
       - uses: GabrielBB/xvfb-action@v1
-         with:
-            run: |
-              export CHROME_BIN=chromium-browser
-              export DISPLAY=:99
-              npm install
-              npm run build
-              npm run lint
-              npm run test
+        with:
+          run: npm run test
   
