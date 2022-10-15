@@ -1,0 +1,29 @@
+name: ci
+on: [push,pull_request]
+jobs:
+  test:
+    name: Node ${{ matrix.node }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+        node:
+          - 'lts/*'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      - uses: nanasess/setup-chromedriver@v1
+      - run: |
+          export CHROME_BIN=chromium-browser
+          export DISPLAY=:99
+          sh -e /etc/init.d/xvfb start
+          sleep 3 # give xvfb some time to start
+      - run: npm install
+      - run: npm run build
+      - run: npm run lint
+      - run: npm run test
+  
